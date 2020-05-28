@@ -18,4 +18,6 @@ WORKDIR /app
 
 EXPOSE 8000
 
-CMD ["gunicorn", "run:app","--config", "/app/gunicorn.config.py"]
+
+#CMD ["gunicorn", "run:app","--config", "/app/gunicorn.config.py"]
+CMD ["gunicorn", "run:__hug_wsgi__","--config", "/app/gunicorn.config.py"]
